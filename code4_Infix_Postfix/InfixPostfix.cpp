@@ -101,7 +101,6 @@ void infixTOpostfix(char infix2[80])
 float ValPostfix[80];
 float ValOperandST[MaxStack];
 int SP2 = 0;
-
 void pushVal(float val)
 {
     ValOperandST[++SP2] = val;
@@ -111,7 +110,6 @@ float popVal()
 {
     return ValOperandST[SP2--];
 }
-
 void CalPostfix(char postfix1[80])
 {
     float pop1, pop2, value;
