@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <conio.h>
-
 int choice;
 int Number, ans;
 int M, N;
@@ -33,7 +32,6 @@ int Power(int M, int N) {
 
 /* ---------- Main Program ---------- */
 int main() {
-
     do {
         printf("\nRECURSIVE PROGRAM MENU\n");
         printf("======================\n");
@@ -43,53 +41,40 @@ int main() {
         printf("----------------------\n");
         printf("Select : ");
         scanf("%d", &choice);
-
         switch (choice) {
             case 1:
-    printf("\nRECRSIVE(FACTORIAL) PROGRAM\n");
-    printf("===========================\n");
-
-    printf("Enter Number (-999 is END) : ");
-    scanf("%d", &Number);
-
-    if (Number >= 0) {
-        printf("N! = N(N-1)!\n");
-        printf("------------\n");
-
-        ans = Factorial(Number);
-
-        printf("\nAnswer N! = %d\n", ans);
-        printf("----------------Finished\n");
-    }
-    getch();
-    break;
-
-
+            printf("\nRECRSIVE(FACTORIAL) PROGRAM\n");
+            printf("===========================\n");
+            printf("Enter Number (-999 is END) : ");
+            scanf("%d", &Number);
+            if (Number >= 0) {
+                printf("N! = N(N-1)!\n");
+                printf("------------\n");
+                ans = Factorial(Number);
+                printf("\nAnswer N! = %d\n", ans);
+                printf("----------------Finished\n");
+            }
+            getch();
+            break;
             case 2:
-                printf("\nEnter M : ");
-                scanf("%d", &M);
-                printf("Enter N : ");
-                scanf("%d", &N);
-
-                if (N >= 0) {
-                    ans = Power(M, N);
-                    printf("\nAnswer %d^%d = %d\n", M, N, ans);
-                } else {
-                    printf("N must be >= 0\n");
-                }
-                getch();
-                break;
-
+            printf("\nEnter M : ");
+            scanf("%d", &M);
+            printf("Enter N : ");
+            scanf("%d", &N);
+            if (N >= 0) {
+                ans = Power(M, N);
+                printf("\nAnswer %d^%d = %d\n", M, N, ans);
+            } else {
+                printf("N must be >= 0\n");
+            }
+            getch();
+            break;
             case 0:
-                printf("\nExit Program...\n");
-                break;
-
+            break;
             default:
-                printf("\nInvalid Choice!\n");
-                getch();
-        }
-
+            printf("\nInvalid Choice!\n");
+            getch();
+        }   
     } while (choice != 0);
-
     return 0;
 }
