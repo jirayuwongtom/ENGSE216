@@ -92,7 +92,7 @@ void infixTOpostfix(char infix2[80])
         }
     }
     while (SP != 0)
-        postfix[k++] = pop();
+    postfix[k++] = pop();
     postfix[k] = '\0';
     printf("POSTFIX : %s\n\n", postfix);
 }
